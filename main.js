@@ -7,7 +7,8 @@ const createBrowser = () => {
     height: 800,
     webPreferences: {
       nodeIntegration: true,   // node集成
-      contextIsolation: false // 环境孤立
+      contextIsolation: false, // 环境孤立
+      enableRemoteModule: true  // 是否可以启用remote模块
     }
   });
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
